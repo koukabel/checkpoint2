@@ -39,14 +39,6 @@ const resolvers = {
       return Country.searchCountryByContinent(continentCode);
     },
   },
-
-  // Mutation: {
-  //   InsertCountry: async ({ code, name, emoji }: { code: string, name: string, emoji: string }) => {
-  //     const newCountry = await Country.createCountry(code, name, emoji);
-  //     return newCountry;
-  //   }
-  // }
-
   Mutation: {
     InsertCountry: async (_: any, args: MutationArgs) => {
       const { code, name, emoji, continentCode } = args;
